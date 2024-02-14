@@ -1,4 +1,4 @@
-# mern-doctor-appointment-booking
+# Mern-doctor-appointment-booking-fullstack-app
 MERN Stack Doctor Appointment Booking Application using React , Redux, Node , MongoDB and Express
 
 # Features of this app
