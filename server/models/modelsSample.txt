@@ -30,3 +30,15 @@ Appointments Model
 
 
 Users model
+this model should have the following set requirements for the users of the platform
+
+name, 
+email, 
+password, 
+a property to confirm if the intending user is a doctor or not
+which will be set to Boolean to accept true or false values,
+a property to confirm if the intending user is an admin or not
+which will be set to Boolean to accept true or false values,
+an array of objects to keep the notifications seen by this user,
+an array of objects to contain the unseen notifications
+ 
