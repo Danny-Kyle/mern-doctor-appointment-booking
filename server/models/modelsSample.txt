@@ -1,0 +1,32 @@
+doctor Model 
+
+this model should have the following set requirements for the doctors who would use the platform
+
+userID, 
+first and last name, 
+work email, 
+phone number, 
+official website, 
+address, 
+field of specialisation, 
+experience
+ and status
+  all being of type string with all being required 
+  except for the status which will be set to a default value of Not Started
+
+it should also have the following requirements for the doctors
+
+charge per meeting
+which will be set to type Number,
+and is required
+
+convenient meeting time
+which will be an array of objects so set to type array
+also required
+
+
+Appointments Model
+
+
+
+Users model
