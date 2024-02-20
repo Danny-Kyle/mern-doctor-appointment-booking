@@ -20,9 +20,40 @@ const doctorSchema = new mongoose.Schema(
         phoneNumber: {
             type: String,
             required: true
-        }
+        },
         website: {
-            
+            type: String,
+            required: true
+        },
+        address: {
+            type: String,
+            required: true
+        },
+        specialization: {
+            type: String,
+            required: true
+        },
+        experience: {
+            type: String,
+            required: true
+        },
+        chargeFee: {
+            type: Number,
+            required: true
+        },
+        timings: {
+            type: Array,
+            required: true
+        },
+        status: {
+            type: String,
+            default: "Not Started"
         }
+    },
+    {
+        timestamps: true
     }
-)
+); 
+
+const DoctorModel = mongoose.model("doctors", doctorSchema)
+module.exports = DoctorModel;
