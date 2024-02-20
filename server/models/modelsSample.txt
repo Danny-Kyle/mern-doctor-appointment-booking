@@ -26,7 +26,16 @@ also required
 
 
 Appointments Model
-
+this model wil contain the following information
+the userID, 
+the doctorID,
+the doctor's information,
+the user's information,
+the problem faced by the user
+the date set for the meeting
+the time set for the meeting
+the meeting status, with values of Not started, in progress, and completed
+with the default value being not started
 
 
 Users model
