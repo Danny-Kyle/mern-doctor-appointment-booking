@@ -8,7 +8,7 @@ work email,
 phone number, 
 official website, 
 address, 
-field of specialisation, 
+field of specialization, 
 experience
  and status
   all being of type string with all being required 
@@ -36,6 +36,8 @@ the date set for the meeting
 the time set for the meeting
 the meeting status, with values of Not started, in progress, and completed
 with the default value being not started
+with all being of type String 
+except from the doctor and user information which will be of type Object
 
 
 Users model
