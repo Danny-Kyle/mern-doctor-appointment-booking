@@ -1,7 +1,7 @@
 import express from "express"
-import db from "./config/db"
 import colors from "cors"
 import path from "path"
+import dbConfig from "./config/dbConfig"
 const app = express();
 app.use(express.json());
 require("dotenv").config();
