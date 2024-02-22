@@ -1,11 +1,13 @@
 import express from "express"
-const app = express();
-require("dotenv").config();
 import db from "./config/db"
-const port = 3235;
-const colors = require ('cors');
+import colors from "cors"
+import path from "path"
+const app = express();
 app.use(express.json());
-const path = require ("path");
+require("dotenv").config();
+
+
+const port = process.env.PORT || 3135;
 
 //routing for the users
 // app.use()
@@ -16,5 +18,7 @@ const path = require ("path");
 //routing for the doctors
 // app.use()
 
+
+app.get("/", (res, req) => res.send("Running Mate"))
 
 app.listen(port, console.log("Running on Port: " + port));
