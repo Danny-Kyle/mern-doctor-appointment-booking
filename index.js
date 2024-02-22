@@ -1,10 +1,10 @@
-const express =require ('express');
+import express from "express"
+const app = express();
 require("dotenv").config();
+import db from "./config/db"
 const port = 3235;
 const colors = require ('cors');
-const app = express();
 app.use(express.json());
-const db = require("./config/db");
 const path = require ("path");
 
 //routing for the users
