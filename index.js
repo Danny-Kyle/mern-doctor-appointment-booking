@@ -1,31 +1,38 @@
-import express from "express"
+import express from "express";
 import { configDotenv } from "dotenv";
 import { mongoose } from "mongoose";
-import colors from "cors"
-import path from "path"
+import colors from "cors";
+import path from "path";
 const app = express();
 app.use(express.json());
 configDotenv();
-const port = process.env.PORT || 3135;
 
-const connection = async () =>{
-    try{
-        await mongoose.connect(process.env.MONGO_URI);
-        console.log(`Mongoose Connected securely ${connection.connection.host}`.cyan.underline.bold);
-    }catch(error){
-        console.log(error);
-        process.exit(1);
-    }
-}
+// const connection = async () =>{
+//     try{
+//         await mongoose.connect(process.env.MONGO_URI);
+//         console.log(`Mongoose Connected securely ${connection.connection.host}`.cyan.underline.bold);
+//     }catch(error){
+//         console.log(error);
+//         process.exit(1);
+//     }
+// }
 
-app.get("/", (res, req) => res.send("Running Mate"))
-
-app.listen(port, ()=>{
-    connection();
-    console.log("Running on Backend Port: " + port);
+mongoose.connection.on("disconnected", () => {
+  console.log("disconnected");
 });
 
+mongoose.connection.on("connected", () => {
+  console.log("MongoDB connected");
+});
 
+app.get("/", (req, res) => {
+  res.send("Running Mate");
+});
+
+app.listen(3235, () => {
+  // connection();
+  console.log(`Running on Backend Port`);
+});
 
 //routing for the users
 // app.use()
@@ -35,4 +42,3 @@ app.listen(port, ()=>{
 
 //routing for the doctors
 // app.use()
-
