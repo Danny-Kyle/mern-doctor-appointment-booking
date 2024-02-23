@@ -56,7 +56,22 @@ router.post("/", async(req, res)=> {
 })
 //update user
 //delete user
-//get user
+
+//this route is used by the user to check which doctors are available to be booked
+router.post("/check-booking-availability", authMiddleware, async(res, req)=> {
+    try {
+        
+    } catch (error) {
+        console.log(error);
+        res
+            .status(500)
+            .send({
+                message: "Error fetching booking availability",
+                success: false,
+                error
+            })
+    }
+})
 
 //to get all certified doctors
 router.get('/get-all-certified-doctors', authMiddleware, async(req, res) => {
