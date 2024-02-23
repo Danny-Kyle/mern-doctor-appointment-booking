@@ -57,11 +57,11 @@ router.post("/", async(req, res)=> {
 //update user
 //delete user
 //get user
-//to get all certified doctors
 
+//to get all certified doctors
 router.get('/get-all-certified-doctors', authMiddleware, async(req, res) => {
     try {
-        const doctors = await Doctor.find({status: approved});
+        const doctors = await Doctor.find({status: "approved"});
         res
             .status(200)
             .send({
