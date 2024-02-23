@@ -1,11 +1,13 @@
 import express from "express"
 import colors from "cors"
 import path from "path"
-import dbConfig from "./config/dbConfig"
+import connectDB from "../config/db"
+// const dbConfig = require("../config/db")
 const app = express();
 app.use(express.json());
 require("dotenv").config();
 
+connectDB();
 
 const port = process.env.PORT || 3135;
 
